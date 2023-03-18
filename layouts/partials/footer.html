@@ -1,3 +1,6 @@
+<!-- newsletter - commented out until I can get 100 subscribers and pay ButtonDown
+{{- partial "newsletter.html" . -}} -->
+
 <div class="footer">
   <div class="container">
     <div class="row">
@@ -5,9 +8,18 @@
         <div class="footer-inner">
           {{ if .Site.Data.social }}
           <ul class="social">
-              {{ range .Site.Data.social }}
-                  <li><a href="{{ .link }}" target="blank"><img width="20" height="20" src="{{ .image | relURL }}" title="{{ .name }}" alt="{{ .name }}" /></a></li>
-              {{ end }}
+            {{ range .Site.Data.social }}
+            <li>
+              <a href="{{ .link }}" target="blank"
+                ><img
+                  width="20"
+                  height="20"
+                  src="{{ .image | relURL }}"
+                  title="{{ .name }}"
+                  alt="{{ .name }}"
+              /></a>
+            </li>
+            {{ end }}
           </ul>
           {{ end }}
           <ul class="footer-menu">
